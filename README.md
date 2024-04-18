@@ -1,2 +1,2 @@
 # Mini-Google-App
-A minimalistic app that allows you to search on Google.
+You can search on Google with this desktop app
