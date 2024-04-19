@@ -7,7 +7,7 @@ void search(webui::window::event* e) {
     std::cout << "Search button pressed\n";
     std::string search = e->get_string();
     std::cout << "Search text: " << search << std::endl;
-    std::string url = "undefinied";
+    std::string url = "web/VarError.html";
     url = "https://cse.google.com/cse?cx=54f071c22d2304d7c#gsc.tab=0&gsc.q=" + search + "&gsc.sort=";
     mainWindow.show(url);
 }
@@ -19,5 +19,3 @@ int main() {
     webui::wait();
     return 0;
 }
-
-// Get news from NewsAPI: https://newsapi.org/v2/everything?q=keyword&apiKey=API
