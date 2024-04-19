@@ -35,18 +35,41 @@
                 color: rgb(194, 194, 194);
                 font-size: 0.7em;
             }
+            #date {
+                position: absolute;
+                right: 10px;
+                top: 5px;
+                font-size: 2em;
+            }
         </style>
     </head>
     <body>
         <div id="MainBox">
+            <p id="date">undefinied</p>
             <p style="font-size: 5em;">Google</p>
             <div style="display: flex;">
                 <input type="text"style="color: white;" id="searchBox">
                 <button style="color: white;" id="searchButton">Search</button>
             </div>
         </div>
-        <p id="bottomText">Mini Google App v1.1</p>
+        <p id="bottomText">Mini Google App v1.2</p>
         <script>
+            var currentDate = new Date();
+
+            var day = currentDate.getDate();
+            var month = currentDate.getMonth() + 1;
+            var year = currentDate.getFullYear();
+
+            var formattedDate = day + '/' + month + '/' + year;
+
+            var dateElement = document.getElementById('date');
+
+            if (dateElement) {
+                dateElement.textContent = formattedDate;
+            } else {
+                console.error('Date element not found');
+            }
+
             document.addEventListener("DOMContentLoaded", function() {
                     var searchButton = document.getElementById("searchButton");
                     searchButton.addEventListener("click", function() {
