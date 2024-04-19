@@ -28,6 +28,13 @@
                 display: block;
                 width: 50%;
             }
+            #bottomText {
+                position: absolute;
+                right: 10px;
+                bottom: 5px;
+                color: rgb(194, 194, 194);
+                font-size: 0.7em;
+            }
         </style>
     </head>
     <body>
@@ -38,6 +45,7 @@
                 <button style="color: white;" id="searchButton">Search</button>
             </div>
         </div>
+        <p id="bottomText">Mini Google App v1.1</p>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                     var searchButton = document.getElementById("searchButton");
